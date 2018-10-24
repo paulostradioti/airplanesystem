@@ -24,6 +24,7 @@ export class AddOrUpdateAirplaneComponent implements OnInit {
     this.airplaneInfo = {
       code: undefined,
       model: '',
+      passengers: 0,
       created: undefined,
       lastUpdate: undefined
     };
