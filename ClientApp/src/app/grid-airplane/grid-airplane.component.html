@@ -1,0 +1,25 @@
+<a href="#" id="new-button">New</a>
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Model</th>
+      <th>Passengers</th>
+      <th>Created</th>
+      <th>Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let airplaneInfo of airplaneData">
+      <td>{{ joggingInfo.code }}</td>
+      <td>{{ joggingInfo.model }}</td>
+      <td>{{ joggingInfo.passengers }}</td>
+      <td>{{ joggingInfo.created }}</td>
+      <td>{{ joggingInfo.lastUpdate }}</td>
+      <td>
+        <a href="#" (click)="editRecord(this)">Edit</a>
+        <a href="#" (click)="deleteRecord(this)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

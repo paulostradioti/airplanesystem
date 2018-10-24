@@ -1,0 +1,18 @@
+<div>
+  <h2 *ngIf="!airplaneInfo || airplaneInfo.code === undefined">Add record</h2>
+  <h2 *ngIf="airplaneInfo && airplaneInfo.code !== undefined">Update record (Code: )</h2>
+  <form>
+    <div class="form-group">
+      <label for="model-input">Airplane Model:</label>
+      <input type="text" id="model-input" [(ngModel)]="airplaneInfo.model"  [ngModelOptions]="{standalone: true}" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="passengers-input">Distance (m)</label>
+      <input type="number" id="passengers-input" [(ngModel)]="airplaneInfo.passengers" [ngModelOptions]="{standalone: true}" class="form-control" />
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="addOrUpdateAirplaneRecord($event);">Save</button>
+
+  </form>
+</div>
