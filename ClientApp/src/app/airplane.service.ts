@@ -15,6 +15,11 @@ export class AirplaneService {
     return test;
   }
 
+  public getItem(payload) {
+    var test = this.http.get(this.accessPointUrl + '/' + payload.code, { headers: this.headers })
+    return test;
+  }
+
   public add(payload) {
     return this.http.post(this.accessPointUrl, payload, { headers: this.headers });
   }

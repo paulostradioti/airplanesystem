@@ -1,5 +1,4 @@
-<a href="#" id="new-button">New</a>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Code</th>
@@ -7,6 +6,7 @@
       <th>Passengers</th>
       <th>Created</th>
       <th>Modified</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -14,11 +14,11 @@
       <td>{{ airplaneInfo.code }}</td>
       <td>{{ airplaneInfo.model }}</td>
       <td>{{ airplaneInfo.passengers }}</td>
-      <td>{{ airplaneInfo.created }}</td>
-      <td>{{ airplaneInfo.lastUpdate }}</td>
+      <td>{{ airplaneInfo.created | date:'yyyy-MM-dd:HH:mm:ss' }}</td>
+      <td>{{ airplaneInfo.lastUpdate | date:'yyyy-MM-dd:HH:mm:ss' }}</td>
       <td>
-        <a href="#" (click)="editRecord(this)">Edit</a>
-        <a href="#" (click)="deleteRecord(this)">Delete</a>
+        <a href="#" (click)="editRecord(airplaneInfo)">Edit</a>
+        <a href="#" (click)="deleteRecord(airplaneInfo)">Delete</a>
       </td>
     </tr>
   </tbody>

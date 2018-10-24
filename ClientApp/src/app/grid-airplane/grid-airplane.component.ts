@@ -26,6 +26,10 @@ export class GridAirplaneComponent implements OnInit {
 
   }
 
+  public teste(code) {
+    console.log(code);
+  }
+
   public newRecord() {
     this.newClicked.emit();
   }
